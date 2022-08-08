@@ -17,3 +17,19 @@ SQLAlchemy==1.4.31
 Werkzeug==2.0.2
 
 #Python 3.9.9
+
+
+
+# {
+#     "is_light": false,
+#     "humidity_up": true,
+#     "humidity_down": false,
+#     "humidity": 70.1,
+#     "temperature": 25.6,
+#     "light_on": 20.30,
+#     "light_off": 14.00,
+#     "prepare_humidity": 80.0,
+#     "current_light": 15.00,
+#     "tdd": 236.80
+# }
+#       127.0.0.1:5000/item/asdf
