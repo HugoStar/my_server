@@ -7,19 +7,19 @@ class Item(Resource):
     parser = reqparse.RequestParser()
 
     parser.add_argument('is_light',
-                    type=bool,
+                    type=int,
                     required=True,
                     help="This field cannot be left blank!"
                     )
 
     parser.add_argument('humidity_up',
-                type=bool,
+                type=int,
                 required=True,
                 help="This field cannot be left blank!"
                 )
 
     parser.add_argument('humidity_down',
-                    type=bool,
+                    type=int,
                     required=True,
                     help="This field cannot be left blank!"
                     )
@@ -74,6 +74,7 @@ class Item(Resource):
 
     def post(self, name):
         data = Item.parser.parse_args()
+        print(data)
         if ItemModel.find_by_name(name):
             item = ItemModel.find_by_name(name)
             item.update(**data)

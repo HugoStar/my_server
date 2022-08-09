@@ -6,9 +6,9 @@ class ItemModel(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80))
-    is_light = db.Column(db.Boolean)
-    humidity_up = db.Column(db.Boolean)
-    humidity_down = db.Column(db.Boolean)
+    is_light = db.Column(db.Integer)
+    humidity_up = db.Column(db.Integer)
+    humidity_down = db.Column(db.Integer)
     humidity = db.Column(db.Float)
     temperature = db.Column(db.Float)
     light_on = db.Column(db.Float)
